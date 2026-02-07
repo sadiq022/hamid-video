@@ -21,7 +21,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
     text += `%0ALooking forward to your response.`;
 
-    const whatsappNumber = "919876543210"; // change if needed
+    const whatsappNumber = "918265993619"; // change if needed
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
 
     window.open(whatsappURL, "_blank");
