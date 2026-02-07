@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/films.css') }}">
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/dedcvbzb9/video/upload/v1770481391/IMG_1321_ho7gvc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title split-title">
+                <span class="title-left">Hamid</span>
+                <span class="title-right">Video Films</span>
+            </h1>
+
+            <p class="hero-workline">
+                Wedding Films • Pre-Wedding Stories • Complete Video Production
+            </p>
+
+            <div class="hero-since">
+                <span>Since 1990</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="about">
+        <div class="container">
+            <h2 class="section-title">Love Stories Told</h2>
+            <p class="section-subtitle">What our couples say about us</p>
+
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770477827/index_stories_fjgvt2.webp" alt="Wedding couple 1">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">Hamid Video Films captured our special day with such artistry and emotion. Every moment was preserved beautifully, and we relive our wedding day every time we watch the film. Truly magical!</p>
+                    <div class="testimonial-author">Priya & Raj Sharma</div>
+                    <div class="testimonial-date">Married December 2023</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421795/IMG_2362.JPG_xymwwc.webp" alt="Wedding couple 2">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">The professionalism and creativity of Hamid's team is unmatched. They made us feel so comfortable, and the photos are absolutely stunning. Our families treasure these memories forever.</p>
+                    <div class="testimonial-author">Aisha & Farhan Khan</div>
+                    <div class="testimonial-date">Married August 2023</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770461171/IMG_2001.JPG_jun045.webp" alt="Wedding couple 3">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">From the engagement to the reception, every moment was captured with such care and detail. The cinematic quality of our wedding film brings tears to our eyes every time. Highly recommended!</p>
+                    <div class="testimonial-author">Neha & Arjun Patel</div>
+                    <div class="testimonial-date">Married March 2024</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770468063/IMG_2619.JPG_sbvuuu.webp" alt="Wedding couple 4">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">Working with Hamid Video Films was the best decision we made for our wedding. Their attention to detail and ability to capture genuine emotions is exceptional. Our wedding album is a true work of art!</p>
+                    <div class="testimonial-author">Sara & Vikram Singh</div>
+                    <div class="testimonial-date">Married June 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A glimpse of our work</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421906/IMG_1998.JPG_dj0vlq.jpg" alt="Wedding photo 1">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770458977/IMG_2139.JPG_ckeja2.webp" alt="Wedding photo 2">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421795/IMG_2362.JPG_xymwwc.webp" alt="Wedding photo 3">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421715/IMG_2005.JPG_sbpwdn.webp" alt="Wedding photo 4">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421693/IMG_2135.JPG_apm0lk.webp" alt="Wedding photo 5">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://res.cloudinary.com/dedcvbzb9/image/upload/v1770421692/IMG_2463.JPG_p2j3s3.webp" alt="Wedding photo 6">
+                </div>
+            </div>
+
+            <a href="{{ url_for('gallery') }}" class="btn-gallery">See More in Gallery</a>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos" id="films">
+        <div class="container">
+            <h2 class="section-title">Featured Films</h2>
+            <p class="section-subtitle">Cinematic wedding stories</p>
+
+            <!-- FILMS GRID (same as Films page) -->
+            <div class="films-grid">
+
+                <a href="https://www.youtube.com/watch?v=hgwNAPem2P0"
+                target="_blank"
+                class="film-card fade-in">
+                    <img src="https://img.youtube.com/vi/hgwNAPem2P0/maxresdefault.jpg"
+                        alt="Wedding Film">
+                    <div class="film-overlay">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=gllUoVniz60"
+                target="_blank"
+                class="film-card fade-in">
+                    <img src="https://img.youtube.com/vi/gllUoVniz60/maxresdefault.jpg"
+                        alt="Wedding Film">
+                    <div class="film-overlay">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=wr21aBFySws"
+                target="_blank"
+                class="film-card fade-in">
+                    <img src="https://img.youtube.com/vi/wr21aBFySws/maxresdefault.jpg"
+                        alt="Wedding Film">
+                    <div class="film-overlay">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- SEE MORE ON YOUTUBE -->
+            <div class="films-footer instagram-footer">
+                <a href="https://www.youtube.com/@hamidvideofilms"
+                target="_blank"
+                class="btn-instagram">
+                    <i class="fab fa-youtube"></i>
+                    See More on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Instagram Reels Section -->
+    <section class="instagram-section" id="instagram">
+        <div class="container">
+
+            <div class="instagram-header">
+                <h2 class="section-title">Latest Reels</h2>
+                <p class="section-subtitle">Behind the scenes & highlights</p>
+            </div>
+
+            <div class="instagram-embed-grid">
+
+                <!-- Reel 1 -->
+                <div class="instagram-card fade-in">
+                    <div class="instagram-embed">
+                        <!-- Official Instagram Embed Code -->
+                        <div class="instagram-post">
+                            <iframe src="https://www.instagram.com/p/DRW9WEniT0d/embed" 
+                                    width="400" 
+                                    height="480" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true"
+                                    allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 2 -->
+                <div class="instagram-card fade-in">
+                    <div class="instagram-embed">
+                        <div class="instagram-post">
+                            <iframe src="https://www.instagram.com/p/DKE0o98SdIe/embed" 
+                                    width="400" 
+                                    height="480" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true"
+                                    allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 3 -->
+                <div class="instagram-card fade-in">
+                    <div class="instagram-embed">
+                        <div class="instagram-post">
+                            <iframe src="https://www.instagram.com/p/DGAqjlqI07p/embed" 
+                                    width="400" 
+                                    height="480" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true"
+                                    allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="instagram-footer">
+                <a href="https://www.instagram.com/hamidvideofilms/"
+                target="_blank"
+                class="btn-instagram">
+                    <i class="fab fa-instagram"></i>
+                    Follow Us on Instagram
+                </a>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,155 @@
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #2d5a3d;
+    --light-green: #4a7c5e;
+    --accent-green: #6b9d7c;
+    --soft-green: #e8f3ed;
+    --cream: #fafaf7;
+    --text-dark: #1a1a1a;
+    --text-light: #666;
+    --gold-accent: #d4af37;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ===== SECTION STYLING ===== */
+section {
+    padding: 6rem 3rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-gallery {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1.2rem 3rem;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-green);
+}
+
+.btn-gallery:hover {
+    background: transparent;
+    color: var(--primary-green);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(45, 90, 61, 0.2);
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    section {
+        padding: 5rem 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .btn-gallery {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .btn-gallery {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+}

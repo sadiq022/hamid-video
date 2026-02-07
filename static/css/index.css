@@ -1,0 +1,664 @@
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(45, 90, 61, 0.35)
+    );
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    z-index: 2;
+}
+
+/* ===== SPLIT TITLE ===== */
+.split-title {
+    display: flex;
+    gap: 1.2rem;
+    overflow: hidden;
+}
+
+.split-title span {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+/* Left & Right Animations */
+.title-left {
+    transform: translateX(-120%);
+    animation: slideInLeft 1.6s ease forwards 0.4s;
+}
+
+.title-right {
+    transform: translateX(120%);
+    animation: slideInRight 1.6s ease forwards 0.4s;
+}
+
+/* ===== SINCE 1990 ===== */
+.hero-since {
+    margin-top: 2.2rem;
+    font-size: 2.4rem;
+    color: #c9972b;
+    opacity: 0;
+    animation: fadeInUp 1.4s ease forwards 1.6s;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .split-title span {
+        font-size: 4.2rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .split-title span {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-since {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 85vh;
+    }
+
+    .split-title {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .split-title span {
+        font-size: 2.4rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-since {
+        font-size: 1.7rem;
+    }
+}
+
+/* ===== HERO WORK DESCRIPTION ===== */
+.hero-workline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeInUpSoft 1.4s ease forwards 1.2s;
+}
+
+/* Soft cinematic fade */
+@keyframes fadeInUpSoft {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-workline {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-workline {
+        font-size: 1.05rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials {
+    background: var(--soft-green);
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.testimonial.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial:nth-child(even) {
+    direction: rtl;
+}
+
+.testimonial:nth-child(even) > * {
+    direction: ltr;
+}
+
+.testimonial-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(45, 90, 61, 0.15);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.testimonial-image:hover img {
+    transform: scale(1.05);
+}
+
+.testimonial-content {
+    padding: 2rem;
+}
+
+.testimonial-text {
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--accent-green);
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    font-family: 'Playfair Display', serif;
+    opacity: 0.3;
+}
+
+.testimonial-author {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-date {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 4/5;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(45, 90, 61, 0.7));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* ===== VIDEOS SECTION ===== */
+.videos {
+    background: white;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+/* ================= INSTAGRAM REELS SECTION ================= */
+.instagram-section {
+    padding: 6rem 3rem;
+    background: var(--cream);
+}
+
+.instagram-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.instagram-handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-green);
+    margin-top: 1rem;
+}
+
+/* Instagram Cards Grid */
+.instagram-embed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.instagram-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 480px; /* Fixed height for iframe */
+}
+
+.instagram-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-embed {
+    height: 100%;
+    width: 100%;
+    background: #fafafa;
+}
+
+.instagram-post {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.instagram-post iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Instagram Footer */
+.instagram-footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 3rem;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-green);
+}
+
+.btn-instagram i {
+    font-size: 1.3rem;
+}
+
+.btn-instagram:hover {
+    background: transparent;
+    color: var(--primary-green);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .instagram-embed-grid {
+        gap: 1.25rem;
+    }
+    
+    .instagram-card {
+        height: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .instagram-section {
+        padding: 5rem 2rem;
+    }
+    
+    .instagram-embed-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1.5rem;
+    }
+    
+    .instagram-card {
+        height: 480px;
+    }
+    
+    .btn-instagram {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .instagram-embed-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 1.5rem;
+    }
+    
+    .instagram-card {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-section {
+        padding: 3rem 1rem;
+    }
+    
+    .instagram-header {
+        margin-bottom: 3rem;
+    }
+    
+    .instagram-handle {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    .btn-instagram {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .instagram-embed-grid {
+        gap: 1.25rem;
+    }
+    
+    .instagram-card {
+        height: 450px;
+    }
+}
+
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        margin-top: 90px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .testimonial, .video-grid, .gallery-grid, .instagram-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .testimonial {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .testimonial:nth-child(even) {
+        direction: ltr;
+    }
+    
+    .testimonial-image img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 80px;
+        height: 90vh;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1.2rem;
+    }
+    
+    .testimonial-text::before {
+        font-size: 4rem;
+        top: -20px;
+        left: -15px;
+    }
+    
+    .testimonial-author {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+    
+    .video-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 75px;
+        height: 85vh;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-image img {
+        height: 300px;
+    }
+    
+    .testimonial-text {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-grid {
+        gap: 1rem;
+    }
+    
+    .instagram-grid {
+        gap: 1rem;
+    }
+}

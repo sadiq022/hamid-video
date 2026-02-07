@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery – Hamid Video Films{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="gallery-header">
+    <div class="container">
+        <h1 class="page-title">Our Wedding Gallery</h1>
+        <p class="page-subtitle">Timeless moments captured with love</p>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+    <div class="container">
+
+        <div id="galleryGrid" class="gallery-grid">
+            {% for image in images %}
+                <div class="gallery-item">
+                    <img src="{{ image.url }}" alt="Wedding Gallery Image">
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prevBtn" class="page-btn" disabled>Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn" class="page-btn">Next</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImage" src="" alt="Gallery Image">
+    <button class="lightbox-nav prev">&#10094;</button>
+    <button class="lightbox-nav next">&#10095;</button>
+</div>
+
+{% endblock %}
+
+{% block page_js %}
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+{% endblock %}

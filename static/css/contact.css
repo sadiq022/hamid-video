@@ -1,0 +1,60 @@
+/* ================= CONTACT PAGE ================= */
+
+.contact-section {
+    padding: 6rem 3rem;
+    background: var(--cream);
+}
+
+.contact-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: white;
+    padding: 3.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.9rem 1.1rem;
+    border-radius: 10px;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(45,90,61,0.15);
+}
+
+.form-actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 2.5rem 2rem;
+    }
+}

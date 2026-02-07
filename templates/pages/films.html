@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Films – Hamid Video Films{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/films.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="gallery-header">
+    <div class="container">
+        <h1 class="page-title">Our Films</h1>
+        <p class="page-subtitle">Cinematic wedding stories crafted with emotion</p>
+    </div>
+</section>
+
+<!-- Films Section -->
+<section class="gallery-section">
+    <div class="container">
+
+        <div class="films-grid">
+
+            <!-- FILM 1 -->
+            <a href="https://www.youtube.com/watch?v=hgwNAPem2P0" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/hgwNAPem2P0/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 2 -->
+            <a href="https://www.youtube.com/watch?v=gllUoVniz60" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/gllUoVniz60/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 3 -->
+            <a href="https://www.youtube.com/watch?v=wr21aBFySws" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/wr21aBFySws/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 4 -->
+            <a href="https://www.youtube.com/watch?v=zlQx-HPdBFs" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/8WvIwmwK_io/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 5 -->
+            <a href="https://www.youtube.com/watch?v=AKkSwZAoo8c" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/AKkSwZAoo8c/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 6 -->
+            <a href="https://www.youtube.com/watch?v=tU7tdp6eTHQ" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/tU7tdp6eTHQ/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 7 -->
+            <a href="https://www.youtube.com/watch?v=mdbT59m-7mo" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/mdbT59m-7mo/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 8 -->
+            <a href="https://www.youtube.com/watch?v=PtJa3n6OiiU" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/PtJa3n6OiiU/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+            <!-- FILM 9 -->
+            <a href="https://www.youtube.com/watch?v=Ts5CtHieyB0" target="_blank" class="film-card">
+                <img src="https://img.youtube.com/vi/Ts5CtHieyB0/maxresdefault.jpg" alt="Wedding Film">
+                <div class="film-overlay"><span class="play-icon">▶</span></div>
+            </a>
+
+        </div>
+
+        <!-- SEE MORE ON YOUTUBE -->
+        <div class="films-footer instagram-footer">
+            <a href="https://www.youtube.com/@YourChannelName"
+            target="_blank"
+            class="btn-instagram">
+                <i class="fab fa-youtube"></i>
+                See More on YouTube
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Let’s Tell Your Story Next</h2>
+            <p class="cta-subtitle">
+                Your wedding deserves a cinematic film that lasts forever.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/919876543210" target="_blank" class="btn-cta btn-whatsapp">
+                    💬 Chat on WhatsApp
+                </a>
+                <a href="tel:+919876543210" class="btn-cta btn-secondary">
+                    📞 Call Us Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Hamid Video Films{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="gallery-header">
+    <div class="container">
+        <h1 class="page-title">About Us</h1>
+        <p class="page-subtitle">Crafting timeless memories since 1990</p>
+    </div>
+</section>
+
+<!-- ===== STATS SECTION ===== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-box fade-in">
+                <div class="stat-icon">🎬</div>
+                <div class="stat-content">
+                    <span class="stat-number">3500+</span>
+                    <span class="stat-label">Weddings Captured</span>
+                </div>
+            </div>
+
+            <div class="stat-box fade-in">
+                <div class="stat-icon">😊</div>
+                <div class="stat-content">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+            </div>
+
+            <div class="stat-box fade-in">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-content">
+                    <span class="stat-number">34+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STORY SECTION ===== -->
+<section class="story-section">
+    <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="decorative-line"></div>
+        <div class="story-content fade-in">
+            <p class="story-text">
+                Since 1990, <strong>Hamid Video Films</strong> has been the premier choice for wedding cinematography and photography in the region. What started as a passion project has grown into a legacy of capturing love stories with artistic vision and technical excellence.
+            </p>
+            <p class="story-text">
+                With more than 3,500 weddings captured and 5,000+ happy couples, we bring unparalleled expertise and a personalized touch to every celebration. Our journey has been guided by a simple philosophy: every wedding is unique, and every love story deserves to be told beautifully.
+            </p>
+            <p class="story-text">
+                Over three decades, we've witnessed traditions evolve while timeless emotions remain. From intimate ceremonies to grand celebrations, we've been honored to preserve moments that families cherish for generations.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TEAM SECTION ===== -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="decorative-line"></div>
+
+        <div class="team-grid">
+            <div class="team-member fade-in">
+                <div class="team-photo-container">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+                         class="team-photo" alt="Hamid Khan" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Hamid Khan</h3>
+                    <p class="team-role">Founder & Lead Cinematographer</p>
+                    <div class="team-experience">
+                        <span class="exp-icon">⏳</span>
+                        <span class="exp-text">35+ Years Experience</span>
+                    </div>
+                    <p class="team-bio">
+                        With over three decades of experience, Hamid pioneered wedding cinematography in the region. His artistic vision and technical mastery have shaped the industry, earning him numerous awards and the trust of thousands of families.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team-member fade-in">
+                <div class="team-photo-container">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face"
+                         class="team-photo" alt="Arif Khan" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Arif Khan</h3>
+                    <p class="team-role">Creative Director & Photographer</p>
+                    <div class="team-experience">
+                        <span class="exp-icon">⏳</span>
+                        <span class="exp-text">15+ Years Experience</span>
+                    </div>
+                    <p class="team-bio">
+                        Arif brings a modern, creative perspective to wedding photography. His ability to capture authentic emotions and stunning compositions has made him one of the most sought-after wedding photographers in the industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content fade-in">
+            <h2 class="cta-title">Let's Create Magic Together</h2>
+            <p class="cta-subtitle">
+                Ready to capture your special moments? Let's plan your dream wedding film.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/919876543210" target="_blank" class="btn-cta btn-whatsapp">
+                    <span class="btn-icon">💬</span>
+                    Chat on WhatsApp
+                </a>
+
+                <a href="tel:+919876543210" class="btn-cta btn-secondary">
+                    <span class="btn-icon">📞</span>
+                    Call Us Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block page_js %}
+<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}

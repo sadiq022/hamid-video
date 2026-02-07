@@ -1,0 +1,231 @@
+/* ===== NAVBAR ROOT ===== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 96px;
+    background: rgba(250, 250, 247, 0.92);
+    backdrop-filter: blur(14px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav.scrolled {
+    height: 84px;
+    background: rgba(250, 250, 247, 0.98);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== CONTAINER ===== */
+.nav-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1b1b1b;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: 1.2rem;
+    color: #000000;
+    font-style: italic;
+    letter-spacing: 0.4px;
+}
+
+/* ===== MENU ===== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    list-style: none;
+}
+
+/* Links */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.4px;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #c9972b;
+    transition: width 0.35s ease;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== CTA LINK ===== */
+.nav-cta .cta-link {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background: #c9972b;
+    color: #fff !important;
+    font-weight: 600;
+    transition: all 0.35s ease;
+}
+
+.nav-cta .cta-link:hover {
+    background: #b58722;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(201, 151, 43, 0.35);
+}
+
+/* ===== MOBILE TOGGLE ===== */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+    color: #222;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1200px) {
+    .nav-container {
+        padding: 0 2.5rem;
+    }
+    .nav-menu {
+        gap: 2.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-main {
+        font-size: 1.45rem;
+    }
+    .logo-image {
+        height: 56px;
+        width: 56px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    nav {
+        height: 80px;
+    }
+
+    .nav-container {
+        padding: 0 1.6rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(250, 250, 247, 0.98);
+        backdrop-filter: blur(12px);
+        padding: 2rem;
+        gap: 0;
+        transition: left 0.35s ease;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        border-top: 1px solid rgba(0,0,0,0.06);
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: block;
+    }
+
+    .nav-cta .cta-link {
+        display: inline-block;
+        margin: 1rem auto 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .logo-main {
+        font-size: 1.2rem;
+    }
+
+    .logo-image {
+        height: 50px;
+        width: 50px;
+    }
+}
