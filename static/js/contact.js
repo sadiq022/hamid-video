@@ -11,17 +11,12 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         `Name: ${name}%0A` +
         `Phone: ${phone}%0A`;
 
-    if (date) {
-        text += `Wedding Date: ${date}%0A`;
-    }
-
-    if (message) {
-        text += `Message: ${message}%0A`;
-    }
+    if (date) text += `Wedding Date: ${date}%0A`;
+    if (message) text += `Message: ${message}%0A`;
 
     text += `%0ALooking forward to your response.`;
 
-    const whatsappNumber = "918265993619"; // change if needed
+    const whatsappNumber = "918265993619";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
 
     window.open(whatsappURL, "_blank");
