@@ -49,26 +49,31 @@
 .form-actions {
     margin-top: 2rem;
     text-align: center;
+    width: 100%;
 }
 
 /* ===== FORM BUTTON (MATCHES SITE BUTTONS) ===== */
 .btn-whatsapp.btn-form {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    padding: 1.2rem 3rem;
+    padding: 1.2rem 2.5rem; /* Reduced from 3rem */
     background: var(--primary-green);
     color: white;
     text-decoration: none;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px; /* Reduced from 2px */
     text-transform: uppercase;
     border-radius: 50px;
     transition: all 0.3s ease;
     border: 2px solid var(--primary-green);
     cursor: pointer;
     white-space: nowrap;
+    /* Remove width: 100% */
+    max-width: 100%; /* Keep this to prevent overflow */
+    box-sizing: border-box;
 }
 
 .btn-whatsapp.btn-form i {
@@ -81,24 +86,36 @@
 }
 
 /* ===== MOBILE ===== */
+@media (max-width: 1024px) {
+    .btn-form,
+    .btn-whatsapp {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px; /* Further reduce on tablets */
+    }
+}
+
 @media (max-width: 768px) {
     .contact-card {
         padding: 2.2rem 1.5rem;
     }
-}
-
-@media (max-width: 1024px) {
+    
     .btn-form,
     .btn-whatsapp {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
+        padding: 1rem 1.8rem;
+        font-size: 1rem;
+        letter-spacing: 0; /* Remove letter spacing on mobile */
     }
 }
 
 @media (max-width: 480px) {
     .btn-form,
     .btn-whatsapp {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn-whatsapp.btn-form i {
+        font-size: 1.1rem;
     }
 }
